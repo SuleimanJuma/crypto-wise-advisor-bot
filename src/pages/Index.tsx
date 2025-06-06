@@ -10,6 +10,7 @@ import CryptoChart from '@/components/CryptoChart';
 import CryptoAnalysis from '@/components/CryptoAnalysis';
 import { fetchLiveCryptoPrice, getSupportedCryptocurrencies } from '@/services/coinGeckoService';
 import LivePriceDisplay from '@/components/LivePriceDisplay';
+import { getGlossary } from '@/glossary';
 
 interface Message {
   id: string;
@@ -165,6 +166,44 @@ Supported cryptocurrencies: ${supportedCoins}, and more!`,
         isBot: true,
         timestamp: new Date(),
       };
+    }
+
+    // Check for glossary/jargon queries
+    const glossaryKeywords = ['what is', 'define', 'explain', 'meaning of'];
+    const isGlossaryQuery = glossaryKeywords.some(keyword => input.startsWith(keyword));
+    if (isGlossaryQuery) {
+      // Extract the term after the keyword
+      let term = input;
+      for (const keyword of glossaryKeywords) {
+        if (term.startsWith(keyword)) {
+          term = term.replace(keyword, '').trim();
+        }
+      }
+      // Remove punctuation and extra spaces
+      term = term.replace(/[^a-zA-Z0-9 ]/g, '').trim();
+      // Capitalize first letter of each word for matching
+      term = term.replace(/\b\w/g, c => c.toUpperCase());
+      // Try to find the term in the glossary
+      const glossary = getGlossary();
+      const entry = glossary.find((e: any) => e.term.toLowerCase() === term.toLowerCase());
+      if (entry) {
+        botResponse = {
+          id: (Date.now() + 1).toString(),
+          text: `**${entry.term}**: ${entry.definition}`,
+          isBot: true,
+          timestamp: new Date(),
+        };
+      } else {
+        botResponse = {
+          id: (Date.now() + 1).toString(),
+          text: `Sorry, I couldn't find a definition for "${term}" in the glossary.`,
+          isBot: true,
+          timestamp: new Date(),
+        };
+      }
+      setMessages(prev => [...prev, botResponse]);
+      setIsLoading(false);
+      return;
     }
 
     setMessages(prev => [...prev, botResponse]);
