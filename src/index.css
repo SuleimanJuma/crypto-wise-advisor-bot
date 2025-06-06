@@ -1,0 +1,78 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --custom-background: 0 0% 100%;
+    --custom-foreground: 222.2 84% 4.9%;
+    --custom-card: 0 0% 100%;
+    --custom-card-foreground: 222.2 84% 4.9%;
+    --custom-popover: 0 0% 100%;
+    --custom-popover-foreground: 222.2 84% 4.9%;
+    --custom-primary: 222.2 47.4% 11.2%;
+    --custom-primary-foreground: 210 40% 98%;
+    --custom-secondary: 210 40% 96.1%;
+    --custom-secondary-foreground: 222.2 47.4% 11.2%;
+    --custom-muted: 210 40% 96.1%;
+    --custom-muted-foreground: 215.4 16.3% 46.9%;
+    --custom-accent: 210 40% 96.1%;
+    --custom-accent-foreground: 222.2 47.4% 11.2%;
+    --custom-destructive: 0 84.2% 60.2%;
+    --custom-destructive-foreground: 210 40% 98%;
+    --custom-border: 214.3 31.8% 91.4%;
+    --custom-input: 214.3 31.8% 91.4%;
+    --custom-ring: 222.2 84% 4.9%;
+    --custom-radius: 0.5rem;
+    --custom-sidebar-background: 0 0% 98%;
+    --custom-sidebar-foreground: 240 5.3% 26.1%;
+    --custom-sidebar-primary: 240 5.9% 10%;
+    --custom-sidebar-primary-foreground: 0 0% 98%;
+    --custom-sidebar-accent: 240 4.8% 95.9%;
+    --custom-sidebar-accent-foreground: 240 5.9% 10%;
+    --custom-sidebar-border: 220 13% 91%;
+    --custom-sidebar-ring: 217.2 91.2% 59.8%;
+    --custom-radix-accordion-content-height: 200px;
+  }
+
+  .dark {
+    --custom-background: 222.2 84% 4.9%;
+    --custom-foreground: 210 40% 98%;
+    --custom-card: 222.2 84% 4.9%;
+    --custom-card-foreground: 210 40% 98%;
+    --custom-popover: 222.2 84% 4.9%;
+    --custom-popover-foreground: 210 40% 98%;
+    --custom-primary: 210 40% 98%;
+    --custom-primary-foreground: 222.2 47.4% 11.2%;
+    --custom-secondary: 217.2 32.6% 17.5%;
+    --custom-secondary-foreground: 210 40% 98%;
+    --custom-muted: 217.2 32.6% 17.5%;
+    --custom-muted-foreground: 215 20.2% 65.1%;
+    --custom-accent: 217.2 32.6% 17.5%;
+    --custom-accent-foreground: 210 40% 98%;
+    --custom-destructive: 0 62.8% 30.6%;
+    --custom-destructive-foreground: 210 40% 98%;
+    --custom-border: 217.2 32.6% 17.5%;
+    --custom-input: 217.2 32.6% 17.5%;
+    --custom-ring: 212.7 26.8% 83.9%;
+    --custom-sidebar-background: 240 5.9% 10%;
+    --custom-sidebar-foreground: 240 4.8% 95.9%;
+    --custom-sidebar-primary: 224.3 76.3% 48%;
+    --custom-sidebar-primary-foreground: 0 0% 100%;
+    --custom-sidebar-accent: 240 3.7% 15.9%;
+    --custom-sidebar-accent-foreground: 240 4.8% 95.9%;
+    --custom-sidebar-border: 240 3.7% 15.9%;
+    --custom-sidebar-ring: 217.2 91.2% 59.8%;
+    --custom-radix-accordion-content-height: 200px;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
+}

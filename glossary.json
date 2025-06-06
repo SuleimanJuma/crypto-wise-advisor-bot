@@ -1,0 +1,162 @@
+[
+  {
+    "term": "Blockchain",
+    "definition": "A decentralized digital ledger that records transactions across many computers in a way that the registered transactions cannot be altered retroactively." 
+  },
+  {
+    "term": "Cryptocurrency",
+    "definition": "A digital or virtual currency that uses cryptography for security and operates independently of a central bank." 
+  },
+  {
+    "term": "Wallet",
+    "definition": "A digital tool (software or hardware) that allows users to store and manage their cryptocurrencies." 
+  },
+  {
+    "term": "Private Key",
+    "definition": "A secret number that allows cryptocurrency to be spent. It should be kept secure and never shared." 
+  },
+  {
+    "term": "Public Key",
+    "definition": "A cryptographic code that allows users to receive cryptocurrencies into their accounts." 
+  },
+  {
+    "term": "Exchange",
+    "definition": "A platform where users can buy, sell, or trade cryptocurrencies." 
+  },
+  {
+    "term": "DeFi",
+    "definition": "Short for Decentralized Finance, it refers to financial services using smart contracts on blockchains, without traditional intermediaries." 
+  },
+  {
+    "term": "NFT",
+    "definition": "Non-Fungible Token, a unique digital asset that represents ownership of a specific item or piece of content, often on the blockchain." 
+  },
+  {
+    "term": "Smart Contract",
+    "definition": "A self-executing contract with the terms of the agreement directly written into code, running on a blockchain." 
+  },
+  {
+    "term": "Mining",
+    "definition": "The process of validating transactions and adding them to the blockchain, often rewarded with new cryptocurrency coins." 
+  },
+  {
+    "term": "Node",
+    "definition": "A computer that helps run and validate a blockchain." 
+  },
+  {
+    "term": "Decentralization",
+    "definition": "No single authority controls the network; it's distributed among users." 
+  },
+  {
+    "term": "Consensus",
+    "definition": "How blockchain participants agree on what’s true (e.g., Proof of Work)." 
+  },
+  {
+    "term": "Hash",
+    "definition": "A unique code that represents data. Used to verify blocks." 
+  },
+  {
+    "term": "Coin vs Token",
+    "definition": "A coin runs on its own blockchain (e.g., BTC). A token runs on another chain (e.g., USDT on Ethereum)." 
+  },
+  {
+    "term": "Stablecoin",
+    "definition": "A token that’s pegged to a fiat currency (e.g., USDT = $1)." 
+  },
+  {
+    "term": "Altcoin",
+    "definition": "Any crypto that's not Bitcoin." 
+  },
+  {
+    "term": "Shitcoin",
+    "definition": "(slang) A coin with little to no value or purpose, often used as a joke." 
+  },
+  {
+    "term": "Gas Fee",
+    "definition": "The fee you pay to execute a transaction on Ethereum." 
+  },
+  {
+    "term": "ERC-20",
+    "definition": "A common standard for Ethereum tokens." 
+  },
+  {
+    "term": "EVM",
+    "definition": "Ethereum Virtual Machine – runs smart contracts on Ethereum." 
+  },
+  {
+    "term": "HODL",
+    "definition": "'Hold On for Dear Life' – slang for holding rather than selling." 
+  },
+  {
+    "term": "FOMO",
+    "definition": "Fear of Missing Out – buying impulsively due to hype." 
+  },
+  {
+    "term": "DYOR",
+    "definition": "Do Your Own Research – advice to learn before investing." 
+  },
+  {
+    "term": "Pump and Dump",
+    "definition": "Inflating a coin’s price then selling off quickly." 
+  },
+  {
+    "term": "Whale",
+    "definition": "Someone who owns a large amount of a cryptocurrency." 
+  },
+  {
+    "term": "Liquidity Pool",
+    "definition": "A smart contract holding tokens used for trading (DEX)." 
+  },
+  {
+    "term": "Staking",
+    "definition": "Locking up your tokens to help run the network and earn rewards." 
+  },
+  {
+    "term": "Yield Farming",
+    "definition": "Moving crypto between DeFi protocols to earn interest." 
+  },
+  {
+    "term": "TVL",
+    "definition": "Total Value Locked – how much money is in a DeFi protocol." 
+  },
+  {
+    "term": "APR/APY",
+    "definition": "Annual interest rates (APR = flat; APY = compounded)." 
+  },
+  {
+    "term": "Seed Phrase",
+    "definition": "12-24 words used to recover your crypto wallet." 
+  },
+  {
+    "term": "Cold Wallet",
+    "definition": "Offline storage (e.g., Ledger, paper wallet)." 
+  },
+  {
+    "term": "Hot Wallet",
+    "definition": "Wallet connected to the internet (e.g., MetaMask)." 
+  },
+  {
+    "term": "Rug Pull",
+    "definition": "A scam where devs disappear with investors’ funds." 
+  },
+  {
+    "term": "GM / GN",
+    "definition": "'Good Morning' / 'Good Night' – common greetings in crypto chats." 
+  },
+  {
+    "term": "WAGMI",
+    "definition": "'We’re All Gonna Make It' – optimistic crypto rallying cry." 
+  },
+  {
+    "term": "NGMI",
+    "definition": "'Not Gonna Make It' – usually joking about bad decisions." 
+  },
+  {
+    "term": "Diamond Hands",
+    "definition": "Someone who refuses to sell, no matter what." 
+  },
+  {
+    "term": "Paper Hands",
+    "definition": "Someone who sells too quickly, afraid of losses." 
+  }
+]
