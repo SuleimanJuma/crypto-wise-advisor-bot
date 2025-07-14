@@ -193,17 +193,47 @@ Supported cryptocurrencies: ${supportedCoins}, and more!`,
           isBot: true,
           timestamp: new Date(),
         };
+        setMessages(prev => [...prev, botResponse]);
+        setIsLoading(false);
+        return;
       } else {
-        botResponse = {
-          id: (Date.now() + 1).toString(),
-          text: `Sorry, I couldn't find a definition for "${term}" in the glossary.`,
-          isBot: true,
-          timestamp: new Date(),
-        };
+        // Fallback to GPT if not found in glossary
+        try {
+          // Use your deployed Supabase Edge Function URL and anon key
+          const supabaseUrl = 'https://afsjsaurdginfebcwgyz.supabase.co/functions/v1/crypto-assistant';
+          const anonKey = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImFmc2pzYXVyZGdpbmZlYmN3Z3l6Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NDkyMTc3MTUsImV4cCI6MjA2NDc5MzcxNX0.wuv3ZVPwoIi1ZpVOxrQGKXfkTdNOubWTSOFGVuY12Fg';
+          const gptResponse = await fetch(supabaseUrl, {
+            method: 'POST',
+            headers: {
+              'Content-Type': 'application/json',
+              'apikey': anonKey,
+              'Authorization': `Bearer ${anonKey}`,
+            },
+            body: JSON.stringify({ prompt: currentInput })
+          });
+          if (!gptResponse.ok) {
+            const errorText = await gptResponse.text();
+            throw new Error(`Supabase Edge Function error: ${gptResponse.status} ${gptResponse.statusText} - ${errorText}`);
+          }
+          const gptData = await gptResponse.json();
+          botResponse = {
+            id: (Date.now() + 1).toString(),
+            text: gptData.result || `Sorry, I couldn't find a definition for "${term}" in the glossary, and GPT did not return a response.`,
+            isBot: true,
+            timestamp: new Date(),
+          };
+        } catch (err) {
+          botResponse = {
+            id: (Date.now() + 1).toString(),
+            text: `Sorry, I couldn't find a definition for "${term}" in the glossary, and there was an error contacting GPT.\n${err instanceof Error ? err.message : ''}`,
+            isBot: true,
+            timestamp: new Date(),
+          };
+        }
+        setMessages(prev => [...prev, botResponse]);
+        setIsLoading(false);
+        return;
       }
-      setMessages(prev => [...prev, botResponse]);
-      setIsLoading(false);
-      return;
     }
 
     setMessages(prev => [...prev, botResponse]);
