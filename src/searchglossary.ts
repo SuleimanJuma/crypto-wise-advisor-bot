@@ -1,4 +1,4 @@
-import glossary from "@/data/glossary.json";
+import glossary from "../glossary.json";
 
 export const searchGlossary = (query: string): string | null => {
   const normalizedQuery = query.toLowerCase().trim();

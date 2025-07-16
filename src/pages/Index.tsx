@@ -1,4 +1,5 @@
 import React, { useState, useRef, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 import { Send, TrendingUp, Leaf, DollarSign, BarChart3, Zap, ShieldCheck } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
@@ -278,6 +279,9 @@ Supported cryptocurrencies: ${supportedCoins}, and more!`,
             Real-time cryptocurrency prices and advanced investment analysis
           </p>
           <div className="flex justify-center gap-6 mt-4">
+            <Link to="/learn" className="inline-block bg-blue-600 text-white px-4 py-2 rounded-lg shadow hover:bg-blue-700 transition-colors font-semibold">
+              Go to Learn Page
+            </Link>
             <div className="flex items-center gap-2 text-green-400">
               <TrendingUp size={20} />
               <span className="text-sm">Live Price Data</span>
