@@ -35,3 +35,39 @@ npm run build
 ## License
 
 MIT
+## Contributors
+
+<!-- readme: contributors -start -->
+<table>
+	<tbody>
+		<tr>
+            <td align="center">
+                <a href="https://github.com/SuleimanJuma">
+                    <sub><b>Suleiman Juma</b></sub>
+                </a>
+            </td>
+            <td align="center">
+                <a href="https://github.com/DawnKelvin">
+                    <sub><b>Kelvin Koech</b></sub>
+                </a>
+            </td>
+            <td align="center">
+                <a href="">
+                    <sub><b></b></sub>
+                </a>
+            </td>
+            <td align="center">
+                <a href="">
+                    <sub><b></b></sub>
+                </a>
+            </td>
+            <td align="center">
+                <a href="">
+                    <br />
+                    <sub><b></b></sub>
+                </a>
+            </td>  
+		</tr>
+	<tbody>
+</table>
+<!-- readme: contributors -end -->
