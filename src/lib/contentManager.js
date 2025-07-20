@@ -122,7 +122,7 @@ A crypto wallet is a digital tool that allows you to store, send, and receive cr
 2. **Use Reputable Platforms**: Stick to well-known exchanges and wallets
 3. **Enable Security Features**: 2FA, withdrawal whitelisting, email confirmations
 4. **Stay Informed**: Follow crypto security news and updates
-5. **Trust Your Instincts**: If something feels wrong, it probably is
+5. **Trust Your Instincts**: If something feels wrong], it probably is
 
 ## If You're Scammed
 1. Document everything
